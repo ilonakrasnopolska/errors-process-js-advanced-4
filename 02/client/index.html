@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15.Обработка ошибок</title>
+  <style>
+    #loading-spinner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="container text-center">
+    <div id="loading-spinner">
+      <div class="spinner-border text-black" style="width: 5rem; height: 5rem;" role="status">
+        <span class="visually-hidden"></span>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="index.js"></script>
+</body>
+</html>
