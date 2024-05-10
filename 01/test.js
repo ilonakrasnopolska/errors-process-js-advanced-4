@@ -19,6 +19,5 @@ test('getMarketingPrice', () => {
 });
 
 test('getAvatarUrl', async () => {
-  const imageUrl = '/images/default.jpg'
-  await expect(getAvatarUrl(1, imageUrl)).resolves.toBe('/images/default.jpg');
-});
+  await expect(getAvatarUrl(1)).resolves.toBe('/images/default.jpg')
+})
