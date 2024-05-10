@@ -37,31 +37,16 @@ export function getMarketingPrice(product) {
 }
 
 // Функция имитирует неудачный запрос за картинкой
-function fetchAvatarImage(userId, imageUrl) {
-  return new Promise((resolve, reject) => {
-    let success = true // Предположим, что операция завершилась успешно
-
-    if (success) {
-      console.log(imageUrl)
-        return resolve({url: imageUrl})
-    } else {
-      reject(new Error(`Error while fetching image for user with id ${userId}`))
-    }
-  });
-}
-
 export async function getAvatarUrl(userId, imageUrl) {
   try {
     if (typeof userId !== 'number') {
       console.log('not a number')
       throw new TypeError('UserId must be numbers!')
+    } else {
+      return '/images/default.jpg'
     }
-   else {
-      const image = await fetchAvatarImage(userId, imageUrl)
-        return image.url;
-  }
-  }catch (error) {
-    console.log('An error occurred:', error.message)
-    throw error
+  } catch (error) {
+    console.error('An error occurred:', error.message)
+    return imageUrl
   }
 }
